@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>vector-diagonal-line-with-box-edges.png</file>
+        <file>rectangle.png</file>
+        <file>pen.png</file>
+        <file>ellipse.png</file>
+        <file>cursor.png</file>
+    </qresource>
+</RCC>

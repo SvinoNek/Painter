@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow
+{
+	background-color:rgb(114, 159, 207)
+}
+#menuBar
+{
+	background-color:rgb(114, 159, 207)
+}
+#mainToolBar
+{
+	background-color:rgb(114, 159, 207)
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="Canvas" name="draw_area" native="true">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave_as"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionPen_Width"/>
+    <addaction name="actionPen_Color"/>
+    <addaction name="actionClear"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCursor"/>
+   <addaction name="actionPen"/>
+   <addaction name="actionLine"/>
+   <addaction name="actionRectangle"/>
+   <addaction name="actionEllipse"/>
+  </widget>
+  <action name="actionCursor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/cursor.png</normaloff>:/icons/cursor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cursor</string>
+   </property>
+   <property name="toolTip">
+    <string>Cursor</string>
+   </property>
+  </action>
+  <action name="actionPen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/pen.png</normaloff>:/icons/pen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pen</string>
+   </property>
+   <property name="toolTip">
+    <string>Pen</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/vector-diagonal-line-with-box-edges.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Line</string>
+   </property>
+   <property name="toolTip">
+    <string>line</string>
+   </property>
+  </action>
+  <action name="actionRectangle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/rectangle.png</normaloff>:/icons/rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rectangle</string>
+   </property>
+   <property name="toolTip">
+    <string>rectangle</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ellipse.png</normaloff>:/icons/ellipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ellipse</string>
+   </property>
+   <property name="toolTip">
+    <string>ellipse</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionPen_Width">
+   <property name="text">
+    <string>Pen Width</string>
+   </property>
+  </action>
+  <action name="actionPen_Color">
+   <property name="text">
+    <string>Pen Color</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QWidget</extends>
+   <header>canvas.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
